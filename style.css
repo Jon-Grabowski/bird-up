@@ -1,26 +1,27 @@
-/* Rectangle 1 /
+/* Rectangle 1 */
 
 
 position: absolute;
-width: 1200px;
-height: 900px;
+width: 1116px;
+height: 880px;
 
 background: #FFFFFF;
 border-radius: 20px;
 
 
-/ Rectangle 2 /
+/* Rectangle 2 */
 
 
 position: absolute;
 width: 225px;
-height: 850px;
+height: 860px;
 
-background: #252525;
+background: rgba(0, 41, 255, 0.4);
+box-shadow: 0px 4px 4px rgba(0, 41, 255, 0.4);
 border-radius: 25px;
 
 
-/ Rectangle 3 /
+/* Rectangle 3 */
 
 
 position: absolute;
@@ -28,48 +29,68 @@ width: 265px;
 height: 100px;
 
 background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
 border-radius: 25px;
 
 
-/ Rectangle 6 /
+/* Rectangle 7 */
 
 
 position: absolute;
-width: 576px;
+width: 563px;
 height: 350px;
 
 background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
-border-radius: 25px;
-
-
-/ Rectangle 8 /
-
-
-position: absolute;
-width: 901px;
-height: 300px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
-border-radius: 25px;
-
-
-/ Rectangle 7 /
-
-
-position: absolute;
-width: 279px;
-height: 350px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
 border-radius: 25px;
 transform: matrix(-1, 0, 0, 1, 0, 0);
 
 
-/ Rectangle 5 /
+/* Rectangle 15 */
+
+
+position: absolute;
+width: 265px;
+height: 752px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+border-radius: 25px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Rectangle 14 */
+
+
+position: absolute;
+width: 559px;
+height: 382px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+border-radius: 25px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* FORM Observer: Bird Name: Location: Date: */
+
+
+position: absolute;
+width: 106px;
+height: 168px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Rectangle 5 */
 
 
 position: absolute;
@@ -77,11 +98,11 @@ width: 265px;
 height: 100px;
 
 background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
 border-radius: 25px;
 
 
-/ Rectangle 4 /
+/* Rectangle 4 */
 
 
 position: absolute;
@@ -89,38 +110,165 @@ width: 265px;
 height: 100px;
 
 background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
 border-radius: 25px;
 
 
-/ Ellipse 1 /
+/* Ellipse 3 */
 
 
 position: absolute;
 width: 45px;
 height: 45px;
 
-background: #2B2B2C;
+background: rgba(0, 41, 255, 0.4);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
-/ Ellipse 3 /
+/* Scientific Name: */
 
 
 position: absolute;
-width: 45px;
-height: 45px;
+width: 213px;
+height: 73px;
 
-background: #2B2B2C;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
 
 
-/ Ellipse 2 */
+
+/* Common Name: */
 
 
 position: absolute;
-width: 45px;
-height: 45px;
+width: 155px;
+height: 48px;
 
-background: #2B2B2C;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Rectangle 9 */
+
+
+position: absolute;
+width: 200px;
+height: 75px;
+
+background: #EBEBEB;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Rectangle 10 */
+
+
+position: absolute;
+width: 200px;
+height: 75px;
+
+background: #EBEBEB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Rectangle 11 */
+
+
+position: absolute;
+width: 200px;
+height: 75px;
+
+background: #EBEBEB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Rectangle 12 */
+
+
+position: absolute;
+width: 200px;
+height: 75px;
+
+background: #EBEBEB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Rectangle 13 */
+
+
+position: absolute;
+width: 200px;
+height: 75px;
+
+background: #EBEBEB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Search by name */
+
+
+position: absolute;
+width: 176px;
+height: 46px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Scrolling List */
+
+
+position: absolute;
+width: 136px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Uploaded image */
+
+
+position: absolute;
+width: 155px;
+height: 42px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #000000;
