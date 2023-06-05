@@ -1,0 +1,126 @@
+/* Rectangle 1 /
+
+
+position: absolute;
+width: 1200px;
+height: 900px;
+
+background: #FFFFFF;
+border-radius: 20px;
+
+
+/ Rectangle 2 /
+
+
+position: absolute;
+width: 225px;
+height: 850px;
+
+background: #252525;
+border-radius: 25px;
+
+
+/ Rectangle 3 /
+
+
+position: absolute;
+width: 265px;
+height: 100px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+
+
+/ Rectangle 6 /
+
+
+position: absolute;
+width: 576px;
+height: 350px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+
+
+/ Rectangle 8 /
+
+
+position: absolute;
+width: 901px;
+height: 300px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+
+
+/ Rectangle 7 /
+
+
+position: absolute;
+width: 279px;
+height: 350px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/ Rectangle 5 /
+
+
+position: absolute;
+width: 265px;
+height: 100px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+
+
+/ Rectangle 4 /
+
+
+position: absolute;
+width: 265px;
+height: 100px;
+
+background: #FFFFFF;
+box-shadow: 0px 5.5px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+
+
+/ Ellipse 1 /
+
+
+position: absolute;
+width: 45px;
+height: 45px;
+
+background: #2B2B2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/ Ellipse 3 /
+
+
+position: absolute;
+width: 45px;
+height: 45px;
+
+background: #2B2B2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+/ Ellipse 2 */
+
+
+position: absolute;
+width: 45px;
+height: 45px;
+
+background: #2B2B2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
