@@ -1,6 +1,8 @@
+/* CSS styles for the page */
+
 /* Parent container */
 .parent-container {
-  position: absolute;
+  position: relative;
   width: 1116px;
   height: 880px;
   background: #FFFFFF;
@@ -9,7 +11,7 @@
 
 /* Nav container */
 .nav-container {
-  position: absolute;
+  position: relative;
   width: 225px;
   height: 860px;
   background: rgba(0, 41, 255, 0.4);
@@ -35,7 +37,7 @@
 
 /* Heading 1 div */
 .heading-1-div {
-  position: absolute;
+  position: relative;
   width: 559px;
   height: 100px;
   background: #FFFFFF;
@@ -45,7 +47,7 @@
 
 /* Comments container form */
 .comments-container {
-  position: absolute;
+  position: relative;
   width: 563px;
   height: 350px;
   background: #FFFFFF;
@@ -56,7 +58,7 @@
 
 /* Comment styles */
 .comment-1, .comment-2 {
-  position: absolute;
+  position: relative;
   width: 110px;
   height: 24px;
   font-family: 'Inter';
@@ -70,7 +72,7 @@
 
 /* Form container */
 .form-container {
-  position: absolute;
+  position: relative;
   width: 265px;
   height: 350px;
   background: #FFFFFF;
@@ -81,7 +83,7 @@
 
 /* Image container */
 .image-container {
-  position: absolute;
+  position: relative;
   width: 845px;
   height: 382px;
   background: #FFFFFF;
@@ -92,7 +94,7 @@
 
 /* Heading search div */
 .heading-search-div {
-  position: absolute;
+  position: relative;
   width: 265px;
   height: 100px;
   background: #FFFFFF;
@@ -102,7 +104,7 @@
 
 /* Search button */
 .search-button {
-  position: absolute;
+  position: relative;
   width: 45px;
   height: 45px;
   background: rgba(0, 41, 255, 0.4);
@@ -111,7 +113,7 @@
 
 /* Common Name */
 .common-name {
-  position: absolute;
+  position: relative;
   width: 155px;
   height: 48px;
   font-family: 'Inter';
@@ -125,4 +127,3 @@
 
 /* Additional styles for other elements... */
 
-color: #000000;
