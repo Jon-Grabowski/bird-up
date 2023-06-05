@@ -1,274 +1,128 @@
-/* Rectangle 1 */
-
-
-position: absolute;
-width: 1116px;
-height: 880px;
-
-background: #FFFFFF;
-border-radius: 20px;
-
-
-/* Rectangle 2 */
-
-
-position: absolute;
-width: 225px;
-height: 860px;
-
-background: rgba(0, 41, 255, 0.4);
-box-shadow: 0px 4px 4px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-
-
-/* Rectangle 3 */
-
-
-position: absolute;
-width: 265px;
-height: 100px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-
-
-/* Rectangle 7 */
-
-
-position: absolute;
-width: 563px;
-height: 350px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-
-/* Rectangle 15 */
-
-
-position: absolute;
-width: 265px;
-height: 752px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-
-/* Rectangle 14 */
-
-
-position: absolute;
-width: 559px;
-height: 382px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
-
-/* FORM Observer: Bird Name: Location: Date: */
-
-
-position: absolute;
-width: 106px;
-height: 168px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #000000;
-
-
-
-/* Rectangle 5 */
-
-
-position: absolute;
-width: 265px;
-height: 100px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-
-
-/* Rectangle 4 */
-
-
-position: absolute;
-width: 265px;
-height: 100px;
-
-background: #FFFFFF;
-box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
-border-radius: 25px;
-
-
-/* Ellipse 3 */
-
-
-position: absolute;
-width: 45px;
-height: 45px;
-
-background: rgba(0, 41, 255, 0.4);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
-/* Scientific Name: */
-
-
-position: absolute;
-width: 213px;
-height: 73px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #000000;
-
-
-
-/* Common Name: */
-
-
-position: absolute;
-width: 155px;
-height: 48px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #000000;
-
-
-
-/* Rectangle 9 */
-
-
-position: absolute;
-width: 200px;
-height: 75px;
-
-background: #EBEBEB;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Rectangle 10 */
-
-
-position: absolute;
-width: 200px;
-height: 75px;
-
-background: #EBEBEB;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Rectangle 11 */
-
-
-position: absolute;
-width: 200px;
-height: 75px;
-
-background: #EBEBEB;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Rectangle 12 */
-
-
-position: absolute;
-width: 200px;
-height: 75px;
-
-background: #EBEBEB;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Rectangle 13 */
-
-
-position: absolute;
-width: 200px;
-height: 75px;
-
-background: #EBEBEB;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Search by name */
-
-
-position: absolute;
-width: 176px;
-height: 46px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #000000;
-
-
-
-/* Scrolling List */
-
-
-position: absolute;
-width: 136px;
-height: 24px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* Uploaded image */
-
-
-position: absolute;
-width: 155px;
-height: 42px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
+/* Parent container */
+.parent-container {
+  position: absolute;
+  width: 1116px;
+  height: 880px;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+
+/* Nav container */
+.nav-container {
+  position: absolute;
+  width: 225px;
+  height: 860px;
+  background: rgba(0, 41, 255, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+}
+
+/* Nav li containers */
+.nav-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container li {
+  width: 200px;
+  height: 75px;
+  background: #EBEBEB;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+/* Heading 1 div */
+.heading-1-div {
+  position: absolute;
+  width: 559px;
+  height: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+}
+
+/* Comments container form */
+.comments-container {
+  position: absolute;
+  width: 563px;
+  height: 350px;
+  background: #FFFFFF;
+  box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Comment styles */
+.comment-1, .comment-2 {
+  position: absolute;
+  width: 110px;
+  height: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Form container */
+.form-container {
+  position: absolute;
+  width: 265px;
+  height: 350px;
+  background: #FFFFFF;
+  box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Image container */
+.image-container {
+  position: absolute;
+  width: 845px;
+  height: 382px;
+  background: #FFFFFF;
+  box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Heading search div */
+.heading-search-div {
+  position: absolute;
+  width: 265px;
+  height: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 5.5px 10px rgba(0, 41, 255, 0.4);
+  border-radius: 25px;
+}
+
+/* Search button */
+.search-button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 41, 255, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Common Name */
+.common-name {
+  position: absolute;
+  width: 155px;
+  height: 48px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Additional styles for other elements... */
 
 color: #000000;
