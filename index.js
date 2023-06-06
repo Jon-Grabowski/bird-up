@@ -5,6 +5,7 @@ fetch('http://localhost:3000/birds')
         birdArrayIterator(birdArray);
     })
 
+    //Render Bird to center of page
 function renderBird(bird) {
     const img = document.getElementById('bird-image');
     img.src = bird.imgURL
@@ -12,17 +13,44 @@ function renderBird(bird) {
     const heading = document.querySelector('#bird-name');
     heading.innerText = bird.name;
     const descrip = document.querySelector('#bird-description');
-    descrip.innerText = bird.decription;
+    descrip.innerText = bird.description;
     const dateLocation = document.querySelector('#bird-date-location');
-    dateLocation.innerText = `Bird spotted on ${bird.date} in ${bird.location}`;
+    dateLocation.innerText = `Spotted on ${bird.date} in ${bird.location}`;
     const comments = document.querySelector('#comments-section');
     comments.innerHTML = ""
     bird.comments.forEach((comment) => {
-        const oneComment = document.createElement('p');
-        oneComment.innerText = comment;
-        comments.append(oneComment);
-    })
+        renderComment(comment, comments);
+    });
+    const wrapper = document.getElementById('featured-bird-image');
+    wrapper.dataset.id = bird.id
 }
+
+function renderComment(comment, comments){
+    const oneComment = document.createElement('p');
+    oneComment.className = 'current-comment'
+    oneComment.innerText = comment;
+    comments.append(oneComment); 
+}
+
+const commentButton = document.getElementById('new-comment-form');
+    commentButton.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newComment = e.target['new-comment'].value
+        const comments = document.querySelector('#comments-section');
+        renderComment(newComment, comments);
+        commentButton.reset();
+
+        const birdID = document.getElementById('featured-bird-image').dataset.id;
+        const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
+        console.log(commentList)
+        fetch(`http://localhost:3000/birds/${birdID}`, {
+            method: 'PATCH',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                "comments": commentList
+            })
+        })
+    })
 
 const birdForm = document.getElementById("new-bird-form")
 birdForm.addEventListener("submit", e => {
@@ -40,6 +68,8 @@ birdForm.addEventListener("submit", e => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(bird)
     })
+    const navBar = document.getElementById('bird-list');
+    renderNavBar(bird, navBar)
 })
 
 const searchButton = document.getElementById("search-button")
@@ -49,24 +79,26 @@ searchButton.addEventListener("click", e => {
     fetch('http://localhost:3000/birds')
     .then(r => r.json())
     .then(birds => {
+        let inDatabase = false
         birds.forEach(bird => {
             if(bird.name.toLowerCase() === birdName.toLowerCase()){
+                inDatabase = true
                 renderBird(bird)
-                return
             }
         })
-        alert(`${birdName} is not in the database`)
+        if(!inDatabase){
+            alert(`${birdName} is not in the database`)
+        }
     })
 })
 
 
 function birdArrayIterator(birdArray) {
-    birdArray.forEach(bird => renderNavBar(bird))
+    const navBar = document.getElementById('bird-list');
+    birdArray.forEach(bird => renderNavBar(bird, navBar))
 }
 
-const navBar = document.getElementById('bird-list');
-console.log(navBar)
-function renderNavBar(bird) {
+function renderNavBar(bird, navBar) {
     const listElement = document.createElement('li');
     listElement.innerText = bird.name;
     listElement.addEventListener('click', (e) => renderBird(bird))
@@ -90,3 +122,23 @@ addBirdButton.addEventListener("click", () => {
   // Toggle the visibility of the new bird form
   newBirdForm.style.display = newBirdForm.style.display === "none" ? "block" : "none";
 });
+
+
+
+
+
+//}
+
+// function saveComment(birdId, comment) {
+//     const url = `${birdsURL}/${birdId}/comments`;
+//     const options = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type' : 'application/jason',
+//         },
+//         body: JSON.stringify({ comment }),
+//     }
+//     fetch(url, options)
+//     .then(response => response.json())
+//     .then(bird =)
+// }

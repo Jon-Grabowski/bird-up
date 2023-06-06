@@ -7,12 +7,12 @@
 <body>
   <div id="wrapper">
     <div id="header">
-      Bird Up!
-      <div id="search-bar">
-        <input id="search-button" type="button" value="Search"/>
-        <input id="search" type="text" />
-        <!-- Search bar content here -->
-      </div>
+      <h1>Bird Up!</h1>
+    </div>
+    <div id="search-bar">
+      <input id="search-button" type="button" value="Search"/>
+      <input id="search" type="text" />
+      <!-- Search bar content here -->
     </div>
 
     <div id="featured-bird-image">
@@ -30,13 +30,17 @@
       </ul>
     </nav>
 
-    
-    <div id="comments-section">
-      <!-- Comments section content here -->
+    <div id="comments-wrapper">
+      <div id="comments-section">
+        <div class="comment"></div>
+      </div>
       <form id="new-comment-form">
-        <!-- New comment form content here -->
+          <label for="new-comment">Add a comment:</label>
+          <input type="text" name="new-comment" placeholder="Type Comment Here...">
+          <input type="submit" name="submit" value="Submit"/>
       </form>
     </div>
+      
 
     <footer>
       <button id="add-bird-button">Add Bird</button>
@@ -63,3 +67,13 @@
   <script src="index.js"></script>
 </body>
 </html>
+
+<div id="comments-section">
+  <div class="comment">
+    <!-- Comment content -->
+  </div>
+  <div class="comment">
+    <!-- Comment content -->
+  </div>
+  <!-- Add more comments as needed -->
+</div>
