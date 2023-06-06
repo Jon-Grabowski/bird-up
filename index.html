@@ -3,6 +3,7 @@
 <head>
   <title>Styled Page</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="./index.js"></script>
 </head>
 <body>
   <div class="parent-container">
@@ -20,8 +21,15 @@
       <div class="comment-1"></div>
       <div class="comment-2"></div>
     </form>
-    <form class="form-container"></form>
-    <img class="image-container" src="path/to/image.jpg" alt="Image description" />
+    <form class="form-container" id="bird-form">
+      <input type="text" name="name" placeholder="Bird name" />
+      <input type="text" name="location" placeholder="Location" />
+      <input type="date" name="date" />
+      <input type="text" name="description" placeholder="description" />
+      <input type="text" name="imgURL" placeholder="Image url" />
+      <input type="submit" name="submit" />
+    </form>
+    <img class="image-container" src="" alt="Image description" />
     <div class="heading-search-div"></div>
     <button class="search-button">Search</button>
     <div class="common-name"></div>
