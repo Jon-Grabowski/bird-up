@@ -1,72 +1,65 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-  <title>Styled Page</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="./index.js"></script>
-</head>
-<body>
-  <div class="parent-container">
-    <nav class="nav-container">
-      <ul>
-        <li class="nav-li-container-1"></li>
-        <li class="nav-li-container-2"></li>
-        <li class="nav-li-container-3"></li>
-        <li class="nav-li-container-4"></li>
-        <li class="nav-li-container-5"></li>
-      </ul>
-    </nav>
-    <div class="heading-1-div"></div>
-    <form class="comments-container">
-      <div class="comment-1"></div>
-      <div class="comment-2"></div>
-    </form>
-    <form class="form-container" id="bird-form">
-      <input type="text" name="name" placeholder="Bird name" />
-      <input type="text" name="location" placeholder="Location" />
-      <input type="date" name="date" />
-      <input type="text" name="description" placeholder="description" />
-      <input type="text" name="imgURL" placeholder="Image url" />
-      <input type="submit" name="submit" />
-    </form>
-    <img class="image-container" src="" alt="Image description" />
-    <div class="heading-search-div"></div>
-    <button class="search-button">Search</button>
-    <div class="common-name"></div>
-    <div class="search-by-name"></div>
-    <div class="scrolling-list"></div>
-    <div class="uploaded-image"></div>
-    <div class="new-comment-form"></div>
-    <div class="bird-name"></div> -->
-=======
-  <title>Website Example</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Bird Up!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div id="wrapper">
-    <div id="faux">
-      <div id="header">
-        <!-- Header content here -->
+    <div id="header">
+      Bird Up!
+      <div id="search-bar">
+        <input id="search-button" type="button" value="Search"/>
+        <input id="search" type="text" />
+        <!-- Search bar content here -->
       </div>
-      <div id="navigation">
-        <!-- Navigation content here -->
-      </div>
-      <div id="leftcolumn">
-        <!-- Left column content here -->
-      </div>
+    </div>
+
+    <div id="featured-bird-image">
+      <img id="bird-image" src="" alt="Featured Bird">
       <div id="content">
-        <!-- Main content here -->
+        <h2 id="bird-name"></h2>
+        <p id="bird-description"></p>
+        <p id="bird-date-location"></p>
       </div>
-      <div id="rightcolumn">
-        <!-- Right column content here -->
+    </div>
+
+    <nav id="navigation-list" class="left-pane">
+      <ul id="bird-list">
+        <!-- Bird list will be dynamically generated here -->
+      </ul>
+    </nav>
+
+    
+    <div id="comments-section">
+      <!-- Comments section content here -->
+      <form id="new-comment-form">
+        <!-- New comment form content here -->
+      </form>
+    </div>
+
+    <footer>
+      <button id="add-bird-button">Add Bird</button>
+      <div id="new-bird-form" style="display: none;">
+        <h2>Add New Bird</h2>
+        <form id="bird-form">
+          <label for="name">Bird Name:</label>
+          <input type="text" name="name"/>
+          <label for="location">Location:</label>
+          <input type="text" name="location" placeholder="Location" />
+          <label for="date">Date:</label>
+          <input type="date" name="date" />
+          <label for="description">Description:</label>
+          <input type="text" name="description" placeholder="description" />
+          <label for="imgURL">Image URL:</label>
+          <input type="text" name="imgURL" placeholder="Image url" />
+          <input type="submit" name="submit" value="Submit"/>
+        </form>
       </div>
-      <div class="clear"></div>
-    </div>
-    <div id="footer">
-      <!-- Footer content here -->
-    </div>
->>>>>>> 8d15e3f7b62c43476f90951bb2facbd8ae5642c1
+      
+    </footer>
   </div>
+
+  <script src="index.js"></script>
 </body>
 </html>

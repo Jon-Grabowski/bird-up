@@ -1,65 +1,120 @@
-* { padding: 0; margin: 0; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
- font-family: Arial, Helvetica, sans-serif;
- font-size: 13px;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
-#wrapper { 
- margin: 0 auto;
- width: 922px;
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 25% 50% 25%;
+  margin: 0 auto;
 }
-#faux {
- background: url(faux-2-3-col.gif);
- margin-bottom: 0px;
- overflow: auto; 
- width: 100%
-}
+
 #header {
- color: #333;
- width: 902px;
- padding: 10px;
- height: 100px;
- margin: 10px 0px 0px 0px;
- background: #D1DBDB;
+  color: #333;
+  font-family: Impact, Arial, sans-serif;
+  font-size: 21px;
+  background: #B3E5FC;
+  grid-row: 1;
+  grid-column: 1/4;
 }
-#navigation {
- color: #333;
- padding: 10px;
- margin: 0px 0px 0px 0px;
- background: #ABBEBE;
+
+#search-bar {
+  color: #333;
+  padding: 10px;
+  background: #E1F5FE;
+  
 }
-#leftcolumn { 
- display: inline;
- color: #333;
- margin:10px;
- padding:0;
- width: 195px;
- float: left;
+
+#navigation-list {
+  list-style-type: none;
+  grid-row: 2;
+  grid-column: 1;
 }
-#content { 
- float: left;
- color: #333;
- margin: 10px 13px;
- padding:0;
- width: 460px;
- display: inline;
- position: relative;
+
+#navigation-list li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-#rightcolumn { 
- display: inline;
- position: relative;
- color: #333;
- margin: 10px 10px 10px 0px;
- padding:0;
- width: 195px;
- float: right;
+
+#navigation-list li:hover {
+  background-color: #FF4136;
+  color: #fff;
 }
-#footer { 
- width: 902px;
- clear: both;
- color: #333;
- background: #ABBEBE;
- margin: 0px 0px 10px 0px;
- padding: 10px;
+
+#bird-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-.clear { clear: both; background: none; }
+
+#bird-description {
+  margin-bottom: 10px;
+}
+
+#featured-bird-image {
+  margin-bottom: 10px;
+  overflow: auto;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#bird-image {
+  width: 100%;
+}
+
+#comments-section {
+  margin-top: 10px;
+  grid-row: 2;
+  grid-column: 3;
+}
+
+#new-comment-form {
+  margin-top: 10px;
+}
+
+footer {
+  background: #E1F5FE;
+  padding: 10px;
+  margin-top: 10px;
+  grid-row:3;
+  grid-column: 1/4;
+}
+
+#new-bird-form {
+  width: 100%;
+}
+
+#new-bird-form label,
+#new-bird-form input,
+#new-bird-form textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#new-bird-form textarea {
+  height: 80px;
+}
+
+#new-bird-form button {
+  padding: 5px 10px;
+  background-color: #E1F5FE;
+  border: none;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+  background: none;
+}
