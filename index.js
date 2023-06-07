@@ -13,6 +13,7 @@ function renderBird(birdID) {
         const img = document.getElementById('bird-image');
         img.src = bird.imgURL
         img.alt = bird.name
+        img.addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
         const heading = document.querySelector('#bird-name');
         heading.innerText = bird.name;
         const descrip = document.querySelector('#bird-description');
@@ -46,7 +47,6 @@ commentButton.addEventListener('submit', (e) => {
 
     const birdID = document.getElementById('featured-bird-image').dataset.id;
     const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
-    console.log(commentList)
     fetch(`http://localhost:3000/birds/${birdID}`, {
         method: 'PATCH',
         headers: {"Content-Type": "application/json"},
@@ -126,23 +126,3 @@ addBirdButton.addEventListener("click", () => {
   // Toggle the visibility of the new bird form
   newBirdForm.style.display = newBirdForm.style.display === "none" ? "block" : "none";
 });
-
-
-
-
-
-//}
-
-// function saveComment(birdId, comment) {
-//     const url = `${birdsURL}/${birdId}/comments`;
-//     const options = {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type' : 'application/jason',
-//         },
-//         body: JSON.stringify({ comment }),
-//     }
-//     fetch(url, options)
-//     .then(response => response.json())
-//     .then(bird =)
-// }
