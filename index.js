@@ -1,28 +1,33 @@
 fetch('http://localhost:3000/birds')
     .then(res => res.json())
     .then(birdArray => {
-        renderBird(birdArray[0]);
         birdArrayIterator(birdArray);
+        renderBird(birdArray[0].id)
     })
 
     //Render Bird to center of page
-function renderBird(bird) {
-    const img = document.getElementById('bird-image');
-    img.src = bird.imgURL
-    img.alt = bird.name
-    const heading = document.querySelector('#bird-name');
-    heading.innerText = bird.name;
-    const descrip = document.querySelector('#bird-description');
-    descrip.innerText = bird.description;
-    const dateLocation = document.querySelector('#bird-date-location');
-    dateLocation.innerText = `Spotted on ${bird.date} in ${bird.location}`;
-    const comments = document.querySelector('#comments-section');
-    comments.innerHTML = ""
-    bird.comments.forEach((comment) => {
-        renderComment(comment, comments);
-    });
-    const wrapper = document.getElementById('featured-bird-image');
-    wrapper.dataset.id = bird.id
+function renderBird(birdID) {
+    fetch(`http://localhost:3000/birds/${birdID}`)
+    .then(r => r.json())
+    .then(bird => {
+        const img = document.getElementById('bird-image');
+        img.src = bird.imgURL
+        img.alt = bird.name
+        img.addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
+        const heading = document.querySelector('#bird-name');
+        heading.innerText = bird.name;
+        const descrip = document.querySelector('#bird-description');
+        descrip.innerText = bird.description;
+        const dateLocation = document.querySelector('#bird-date-location');
+        dateLocation.innerText = `Spotted on ${bird.date} in ${bird.location}`;
+        const comments = document.querySelector('#comments-section');
+        comments.innerHTML = ""
+        bird.comments.forEach((comment) => {
+            renderComment(comment, comments);
+        });
+        const wrapper = document.getElementById('featured-bird-image');
+        wrapper.dataset.id = bird.id
+    })
 }
 
 function renderComment(comment, comments){
@@ -33,24 +38,23 @@ function renderComment(comment, comments){
 }
 
 const commentButton = document.getElementById('new-comment-form');
-    commentButton.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const newComment = e.target['new-comment'].value
-        const comments = document.querySelector('#comments-section');
-        renderComment(newComment, comments);
-        commentButton.reset();
+commentButton.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newComment = e.target['new-comment'].value
+    const comments = document.querySelector('#comments-section');
+    renderComment(newComment, comments);
+    commentButton.reset();
 
-        const birdID = document.getElementById('featured-bird-image').dataset.id;
-        const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
-        console.log(commentList)
-        fetch(`http://localhost:3000/birds/${birdID}`, {
-            method: 'PATCH',
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({
-                "comments": commentList
-            })
+    const birdID = document.getElementById('featured-bird-image').dataset.id;
+    const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
+    fetch(`http://localhost:3000/birds/${birdID}`, {
+        method: 'PATCH',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            "comments": commentList
         })
     })
+})
 
 const birdForm = document.getElementById("new-bird-form")
 birdForm.addEventListener("submit", e => {
@@ -83,7 +87,7 @@ searchButton.addEventListener("click", e => {
         birds.forEach(bird => {
             if(bird.name.toLowerCase() === birdName.toLowerCase()){
                 inDatabase = true
-                renderBird(bird)
+                renderBird(bird.id)
             }
         })
         if(!inDatabase){
@@ -101,7 +105,7 @@ function birdArrayIterator(birdArray) {
 function renderNavBar(bird, navBar) {
     const listElement = document.createElement('li');
     listElement.innerText = bird.name;
-    listElement.addEventListener('click', (e) => renderBird(bird))
+    listElement.addEventListener('click', (e) => renderBird(bird.id))
     listElement.addEventListener('mouseover', e => {
         e.target.classList.add('hover')
     })
@@ -122,23 +126,3 @@ addBirdButton.addEventListener("click", () => {
   // Toggle the visibility of the new bird form
   newBirdForm.style.display = newBirdForm.style.display === "none" ? "block" : "none";
 });
-
-
-
-
-
-//}
-
-// function saveComment(birdId, comment) {
-//     const url = `${birdsURL}/${birdId}/comments`;
-//     const options = {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type' : 'application/jason',
-//         },
-//         body: JSON.stringify({ comment }),
-//     }
-//     fetch(url, options)
-//     .then(response => response.json())
-//     .then(bird =)
-// }
