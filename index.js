@@ -6,6 +6,7 @@ fetch('http://localhost:3000/birds')
     })
 
     //Render Bird to center of page
+document.getElementById('bird-image').addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
 function renderBird(birdID) {
     fetch(`http://localhost:3000/birds/${birdID}`)
     .then(r => r.json())
@@ -13,7 +14,6 @@ function renderBird(birdID) {
         const img = document.getElementById('bird-image');
         img.src = bird.imgURL
         img.alt = bird.name
-        img.addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
         const heading = document.querySelector('#bird-name');
         heading.innerText = bird.name;
         const descrip = document.querySelector('#bird-description');
