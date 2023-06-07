@@ -10,9 +10,8 @@
       <h1>Bird Up!</h1>
     </div>
     <div id="search-bar">
-      <input id="search-button" type="button" value="Search"/>
       <input id="search" type="text" />
-      <!-- Search bar content here -->
+      <input id="search-button" type="button" value="Search"/>
     </div>
 
     <div id="featured-bird-image">
@@ -31,14 +30,19 @@
     </nav>
 
     <div id="comments-wrapper">
+      <h2>
+        Comments
+      </h2>
       <div id="comments-section">
         <div class="comment"></div>
       </div>
-      <form id="new-comment-form">
-          <label for="new-comment">Add a comment:</label>
-          <input type="text" name="new-comment" placeholder="Type Comment Here...">
-          <input type="submit" name="submit" value="Submit"/>
-      </form>
+      <div id="comment-form-wrapper">
+        <form id="new-comment-form">
+            <label for="new-comment">Add a comment:<br></label>
+            <input type="text" name="new-comment" placeholder="Type Comment Here...">
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+      </div>
     </div>
       
 
@@ -47,16 +51,26 @@
       <div id="new-bird-form" style="display: none;">
         <h2>Add New Bird</h2>
         <form id="bird-form">
-          <label for="name">Bird Name:</label>
-          <input type="text" name="name"/>
-          <label for="location">Location:</label>
-          <input type="text" name="location" placeholder="Location" />
-          <label for="date">Date:</label>
-          <input type="date" name="date" />
-          <label for="description">Description:</label>
-          <input type="text" name="description" placeholder="description" />
-          <label for="imgURL">Image URL:</label>
-          <input type="text" name="imgURL" placeholder="Image url" />
+          <p>
+            <label for="name">Bird Name:</label>
+            <input type="text" name="name"/>
+          </p>
+          <p>
+            <label for="location">Location:</label>
+            <input type="text" name="location" placeholder="Location" />
+          </p>
+          <p>
+            <label for="date">Date:</label>
+            <input type="date" name="date" />
+          </p>
+          <p>
+            <label for="description">Description:</label>
+            <input type="text" name="description" placeholder="description" />
+          </p>
+          <p>
+            <label for="imgURL">Image URL:</label>
+            <input type="text" name="imgURL" placeholder="Image url" />
+          </p>
           <input type="submit" name="submit" value="Submit"/>
         </form>
       </div>
@@ -67,13 +81,3 @@
   <script src="index.js"></script>
 </body>
 </html>
-
-<div id="comments-section">
-  <div class="comment">
-    <!-- Comment content -->
-  </div>
-  <div class="comment">
-    <!-- Comment content -->
-  </div>
-  <!-- Add more comments as needed -->
-</div>

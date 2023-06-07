@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-family: 'Segoe UI Semibold', Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 #wrapper {
@@ -16,72 +16,82 @@ body {
 }
 
 #header {
-  color: #333;
-  font-family: Impact, Arial, sans-serif;
-  font-size: 21px;
-  background: #B3E5FC;
+  color: #fffffff2;
+  font-family: Rockwell, serif;
+  font-size: 29px;
+  letter-spacing: -0.5px;
+  background: #5598AF;
   grid-row: 1;
-  grid-column: 1/4; /*Updated grid-column value*/
-  border: 1px dotted black;
+  grid-column: 1/4;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
-/*  */
+
 #search-bar {
   color: #333;
   padding: 10px;
-  background: #E1F5FE;
-  border: 1px dotted black;
-  grid-row: 1; 
+  background: #5598AF;
+  grid-row: 1;
   grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
 }
 
 #navigation-list {
-  list-style-type: none;
-  grid-row: 2;
-  grid-column: 1;
-  border: 1px dotted black;
+  padding-left: 10px;
+  padding-right: 50px;
+  background-color: #5598AF;
 }
 
 #navigation-list li {
-  font-size: 14px;
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 4px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #a6ecfdd3;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.431);
+  color: #000000;
+  border-radius: 50px;
+  margin: 10;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 1px dotted black;
+  list-style-type: none;
+  justify-content: center;
+  font-size: 18px;
 }
 
 #navigation-list li:hover {
-  background-color: #FF4136;
+  background-color: #DF3C22;
   color: #fff;
 }
 
 #bird-name {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: bold;
   margin-bottom: 10px;
-  border: 1px dotted black;
 }
 
-#bird-description {
-  border: 1px dotted black;
-}
+/* #bird-description { */
+/* } */
 
 #featured-bird-image {
   padding: 50px;
   overflow: auto;
   grid-row: 2;
   grid-column: 2;
-  border: 1px dotted black;
+  box-shadow: 10px 10px 5px #d2d6d9;
+  margin: 11px;
+  border: solid #808080a6;
+  border-radius: 5px;
 }
 
 #bird-image {
   width: 100%;
   height: auto;
+  border: solid #808080a6;
+  border-radius: 5px;
 }
 
-#comments-section{
+#comments-section {
   border: none;
   display: flex;
   flex-direction: column;
@@ -93,30 +103,25 @@ body {
 .current-comment {
   margin-top: 10px;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #A6EBFD;
+  color: #000000;
   border-radius: 50px;
   width: 80%;
-  margin: 10;
-
+  box-shadow: 5px 5px 5px #d2d6d9;
 }
-
 
 #new-comment-form {
   margin-top: 10px;
-  border: 1px dotted black;
   position: absolute;
-  bottom: 0;
-  ;
+  bottom: 10px;
 }
 
 footer {
-  background: #E1F5FE;
+  background: #5598AF;
   padding: 10px;
-  margin-top: 10px;
-  grid-row:3;
+  /* margin-top: 10px; */
+  grid-row: 3;
   grid-column: 1/4;
-  border: 1px dotted black;
 }
 
 #new-bird-form {
@@ -126,7 +131,6 @@ footer {
 #new-bird-form label,
 #new-bird-form input,
 #new-bird-form textarea {
-  display: block;
   margin-bottom: 10px;
 }
 
@@ -136,7 +140,7 @@ footer {
 
 #new-bird-form button {
   padding: 5px 10px;
-  background-color: #E1F5FE;
+  background-color: #C7E1EB;
   border: none;
   cursor: pointer;
 }
@@ -146,9 +150,48 @@ footer {
   background: none;
 }
 
-#comments-wrapper{
+#comments-wrapper {
   grid-row: 2;
   grid-column: 3;
   position: relative;
+  text-align: center;
+  margin-top: 15px;
+}
 
+#comments-wrapper h2{
+  font-family: 'Segoe UI';
+}
+
+#comment-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bird-list{
+  margin-bottom: 15px;
+}
+
+#bird-form label{
+  padding-right: 10px;
+  float: left;
+  width: 100px;
+}
+
+#new-bird-form h2{
+  padding-bottom: 5px;
+}
+
+button,
+input[type="submit"],
+#search-button{
+  background-color: #c4eef8;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  border: solid #808080a6;
+  font-family: 'Segoe UI Semibold', Arial, Helvetica, sans-serif;
+}
+
+h1{
+  text-shadow: 5px 5px 6px black;
 }
