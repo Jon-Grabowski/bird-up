@@ -128,7 +128,7 @@
       "location": "NY",
       "date": "2023-06-05",
       "imgURL": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/103563071/2400",
-      "description": "This gem of a warbler is in precipitous decline over much of its range. Distinctive if seen well; note black-and-white face pattern with yellow crown and large yellow patch on wing. Female is a washed-out version of male. Frequently hybridizes with Blue-winged Warbler. Found in shrubby habitats near the edge of taller forest, often close to water. Sings a high-pitched buzzy song usually 3-4 notes with first note highest, but variable; occasionally identical to Blue-winged Warbler but typically higher and finer. Feeds on insects.",
+      "des  cription": "This gem of a warbler is in precipitous decline over much of its range. Distinctive if seen well; note black-and-white face pattern with yellow crown and large yellow patch on wing. Female is a washed-out version of male. Frequently hybridizes with Blue-winged Warbler. Found in shrubby habitats near the edge of taller forest, often close to water. Sings a high-pitched buzzy song usually 3-4 notes with first note highest, but variable; occasionally identical to Blue-winged Warbler but typically higher and finer. Feeds on insects.",
       "comments": [
         "You are the worst bird ever"
       ],
@@ -144,6 +144,17 @@
         "Pretty Bird!"
       ],
       "id": 12
+    },
+    {
+      "name": "Andean Cock-of-the-rock",
+      "location": "Peru",
+      "date": "2021-05-04",
+      "imgURL": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/250885351/",
+      "description": "One of the iconic birds of the Andes. Fairly large, significantly larger and chunkier than a thrush. Found in cloud forest at middle elevations, most often at a dawn display site where males make piglike squeals and jump and dance for females. Sometimes seen elsewhere in the forest, especially at fruiting trees. Males can be either brilliant crimson or orange, always with black wings and broad silver tertials, orange legs, and puffy rounded crest. Female duller brown with smaller crest; note staring pale eye. Nests on large rocks or cliff faces. Only similar species is Guianan Cock-of-the-rock, but no range overlap.",
+      "comments": [
+        "As beautiful as its name"
+      ],
+      "id": 13
     }
   ]
 }
