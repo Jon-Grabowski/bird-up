@@ -32,6 +32,9 @@ body {
   background: #5598AF;
   grid-row: 1;
   grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
 }
 
 #navigation-list {
@@ -74,11 +77,17 @@ body {
   overflow: auto;
   grid-row: 2;
   grid-column: 2;
+  box-shadow: 10px 10px 5px #d2d6d9;
+  margin: 11px;
+  border: solid #808080a6;
+  border-radius: 5px;
 }
 
 #bird-image {
   width: 100%;
   height: auto;
+  border: solid #808080a6;
+  border-radius: 5px;
 }
 
 #comments-section {
@@ -97,13 +106,13 @@ body {
   color: #000000;
   border-radius: 50px;
   width: 80%;
-  margin: 10;
+  box-shadow: 5px 5px 5px #d2d6d9;
 }
 
 #new-comment-form {
   margin-top: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 
 footer {
@@ -121,7 +130,6 @@ footer {
 #new-bird-form label,
 #new-bird-form input,
 #new-bird-form textarea {
-  display: block;
   margin-bottom: 10px;
 }
 
@@ -145,4 +153,40 @@ footer {
   grid-row: 2;
   grid-column: 3;
   position: relative;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#comments-wrapper h2{
+  font-family: 'Segoe UI';
+}
+
+#comment-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bird-list{
+  margin-bottom: 15px;
+}
+
+#bird-form label{
+  padding-right: 10px;
+  float: left;
+  width: 100px;
+}
+
+#new-bird-form h2{
+  padding-bottom: 5px;
+}
+
+button,
+input[type="submit"],
+#search-button{
+  background-color: #c4eef8;
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+  border: solid #808080a6;
+  font-family: 'Segoe UI Semibold', Arial, Helvetica, sans-serif;
 }
