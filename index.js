@@ -70,7 +70,7 @@ function renderNavBar(bird, navBar) {
 
 //Adds event listener to Add Bird Form and handles POST to DB.
 function renderNewBirdForm() {
-    const birdForm = document.getElementById("new-bird-form")
+    const birdForm = document.getElementById("bird-form")
     birdForm.addEventListener("submit", e => {
         e.preventDefault()
         let bird = {
@@ -86,8 +86,13 @@ function renderNewBirdForm() {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(bird)
         })
-        const navBar = document.getElementById('bird-list');
-        renderNavBar(bird, navBar)
+        .then(r => r.json())
+        .then(b => {
+            const navBar = document.getElementById('bird-list');
+            renderNavBar(b, navBar)
+            renderBird(b.id)
+        })
+        birdForm.reset()
     });
 };
 
