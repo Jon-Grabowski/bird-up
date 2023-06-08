@@ -15,4 +15,4 @@ Click the "Add Bird" button at the bottom of the page to reveal the new bird sub
 Once all the information is filled in, users click Submit to submit their post. Upon submission, the information is posted to the database and the post is added to the list of birds on the left of the page. 
 
 Adding a Comment:
-On the right of the page is a comment section that displays any comments that have been made for the currently displayed bird post. Users can use the text box at the bottom of the comment section to add their own comment to a post. The new comment is patched to the database and then displayed in the comment section. The new comment will persisent and will still display upon a page refresh. 
+On the right of the page is a comment section that displays any comments that have been made for the currently displayed bird post. Users can use the text box at the bottom of the comment section to add their own comment to a post. The new comment is patched to the database and then displayed in the comment section. The new comment will persist and will still display upon a page refresh. 
