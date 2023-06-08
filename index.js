@@ -1,12 +1,14 @@
-fetch('http://localhost:3000/birds')
-    .then(res => res.json())
-    .then(birdArray => {
-        birdArrayIterator(birdArray);
-        renderBird(birdArray[0].id)
-    })
+// BIRD UP!
 
-    //Render Bird to center of page
-document.getElementById('bird-image').addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
+//Renders comments on page.
+function renderComment(comment, comments){
+    const oneComment = document.createElement('p');
+    oneComment.className = 'current-comment'
+    oneComment.innerText = comment;
+    comments.append(oneComment); 
+};
+
+//Render Bird to center of page
 function renderBird(birdID) {
     fetch(`http://localhost:3000/birds/${birdID}`)
     .then(r => r.json())
@@ -27,81 +29,32 @@ function renderBird(birdID) {
         });
         const wrapper = document.getElementById('featured-bird-image');
         wrapper.dataset.id = bird.id
-    })
-}
+    });
+};
 
-function renderComment(comment, comments){
-    const oneComment = document.createElement('p');
-    oneComment.className = 'current-comment'
-    oneComment.innerText = comment;
-    comments.append(oneComment); 
-}
+//Adds event listener and handles submit for new comments.
+function submitNewComment() {
+    const commentButton = document.getElementById('new-comment-form');
+    commentButton.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newComment = e.target['new-comment'].value
+        const comments = document.querySelector('#comments-section');
+        renderComment(newComment, comments);
+        commentButton.reset();
 
-const commentButton = document.getElementById('new-comment-form');
-commentButton.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const newComment = e.target['new-comment'].value
-    const comments = document.querySelector('#comments-section');
-    renderComment(newComment, comments);
-    commentButton.reset();
+        const birdID = document.getElementById('featured-bird-image').dataset.id;
+        const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
+        fetch(`http://localhost:3000/birds/${birdID}`, {
+            method: 'PATCH',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                "comments": commentList
+            })
+        });
+    });
+};
 
-    const birdID = document.getElementById('featured-bird-image').dataset.id;
-    const commentList = Array.from(document.querySelectorAll('.current-comment')).map(p => p.innerText)
-    fetch(`http://localhost:3000/birds/${birdID}`, {
-        method: 'PATCH',
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-            "comments": commentList
-        })
-    })
-})
-
-const birdForm = document.getElementById("new-bird-form")
-birdForm.addEventListener("submit", e => {
-    e.preventDefault()
-    let bird = {
-        "name": e.target.name.value,
-        "location": e.target.location.value,
-        "date": e.target.date.value,
-        "imgURL": e.target.imgURL.value,
-        "description": e.target.description.value,
-        "comments": []
-    }
-    fetch('http://localhost:3000/birds', {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(bird)
-    })
-    const navBar = document.getElementById('bird-list');
-    renderNavBar(bird, navBar)
-})
-
-const searchButton = document.getElementById("search-button")
-searchButton.addEventListener("click", e => {
-    e.preventDefault()
-    let birdName = document.getElementById("search").value
-    fetch('http://localhost:3000/birds')
-    .then(r => r.json())
-    .then(birds => {
-        let inDatabase = false
-        birds.forEach(bird => {
-            if(bird.name.toLowerCase() === birdName.toLowerCase()){
-                inDatabase = true
-                renderBird(bird.id)
-            }
-        })
-        if(!inDatabase){
-            alert(`${birdName} is not in the database`)
-        }
-    })
-})
-
-
-function birdArrayIterator(birdArray) {
-    const navBar = document.getElementById('bird-list');
-    birdArray.forEach(bird => renderNavBar(bird, navBar))
-}
-
+//Renders the Navagation Bar on left of page.
 function renderNavBar(bird, navBar) {
     const listElement = document.createElement('li');
     listElement.innerText = bird.name;
@@ -113,16 +66,86 @@ function renderNavBar(bird, navBar) {
         e.target.classList.remove('hover')
     })
     navBar.append(listElement);
-}
+};
 
-// Get the "Add New Bird" button element
-const addBirdButton = document.getElementById("add-bird-button");
+//Adds event listener to Add Bird Form and handles POST to DB.
+function renderNewBirdForm() {
+    const birdForm = document.getElementById("new-bird-form")
+    birdForm.addEventListener("submit", e => {
+        e.preventDefault()
+        let bird = {
+            "name": e.target.name.value,
+            "location": e.target.location.value,
+            "date": e.target.date.value,
+            "imgURL": e.target.imgURL.value,
+            "description": e.target.description.value,
+            "comments": []
+        }
+        fetch('http://localhost:3000/birds', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(bird)
+        })
+        const navBar = document.getElementById('bird-list');
+        renderNavBar(bird, navBar)
+    });
+};
 
-// Get the new bird form element
-const newBirdForm = document.getElementById("new-bird-form");
+//Search bar functionality. 
+function searchBar() {
+    const searchButton = document.getElementById("search-button")
+    searchButton.addEventListener("click", e => {
+        e.preventDefault()
+        let birdName = document.getElementById("search").value
+        fetch('http://localhost:3000/birds')
+        .then(r => r.json())
+        .then(birds => {
+            let inDatabase = false
+            birds.forEach(bird => {
+                if(bird.name.toLowerCase() === birdName.toLowerCase()){
+                    inDatabase = true
+                    renderBird(bird.id)
+                };
+            });
+            if(!inDatabase){
+                alert(`${birdName} is not in the database`)
+            };
+        });
+    });
+};
 
-// Add an event listener to the button
-addBirdButton.addEventListener("click", () => {
-  // Toggle the visibility of the new bird form
-  newBirdForm.style.display = newBirdForm.style.display === "none" ? "block" : "none";
-});
+//Iterates through the array of bird objects.
+function birdArrayIterator(birdArray) {
+    const navBar = document.getElementById('bird-list');
+    birdArray.forEach(bird => renderNavBar(bird, navBar));
+};
+
+//Function that initializes on page load.
+function init() {
+    //
+    fetch('http://localhost:3000/birds')
+    .then(res => res.json())
+    .then(birdArray => {
+        birdArrayIterator(birdArray);
+        renderBird(birdArray[0].id)
+    });
+
+    //Adding extra feature event listener.
+    document.getElementById('bird-image').addEventListener('click', () => {alert(`Please don't touch the wildlife.`)});
+
+    //Adding event listener for Add Bird pop up menu.
+    const addBirdButton = document.getElementById("add-bird-button");
+    const newBirdForm = document.getElementById("new-bird-form");
+    //Visablity toggle for Add Bird form.
+    addBirdButton.addEventListener("click", () => {
+        newBirdForm.style.display = newBirdForm.style.display === "none" ? "block" : "none";
+    });
+
+    //Calling functions we want to execute on page load.
+    searchBar();
+    renderNewBirdForm();
+    submitNewComment();
+};
+
+
+init();

@@ -128,9 +128,11 @@
       "location": "NY",
       "date": "2023-06-05",
       "imgURL": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/103563071/2400",
-      "des  cription": "This gem of a warbler is in precipitous decline over much of its range. Distinctive if seen well; note black-and-white face pattern with yellow crown and large yellow patch on wing. Female is a washed-out version of male. Frequently hybridizes with Blue-winged Warbler. Found in shrubby habitats near the edge of taller forest, often close to water. Sings a high-pitched buzzy song usually 3-4 notes with first note highest, but variable; occasionally identical to Blue-winged Warbler but typically higher and finer. Feeds on insects.",
+      "description": "This gem of a warbler is in precipitous decline over much of its range. Distinctive if seen well; note black-and-white face pattern with yellow crown and large yellow patch on wing. Female is a washed-out version of male. Frequently hybridizes with Blue-winged Warbler. Found in shrubby habitats near the edge of taller forest, often close to water. Sings a high-pitched buzzy song usually 3-4 notes with first note highest, but variable; occasionally identical to Blue-winged Warbler but typically higher and finer. Feeds on insects.",
       "comments": [
-        "You are the worst bird ever"
+        "You are the worst bird ever",
+        "You aren't so bad!",
+        "I don't know what he's talking about, I love these things!"
       ],
       "id": 11
     },
@@ -141,7 +143,8 @@
       "imgURL": "https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_640.jpg",
       "description": "The bird is nice.",
       "comments": [
-        "Pretty Bird!"
+        "Pretty Bird!",
+        "That's a cool bird!"
       ],
       "id": 12
     },
@@ -156,6 +159,15 @@
         "So Pretty!"
       ],
       "id": 13
+    },
+    {
+      "name": "Fiery-throated Hummingbird",
+      "location": "Costa Rica",
+      "date": "2023-03-21",
+      "imgURL": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/245192511/",
+      "description": "If you see the throat in good light, there is no mistaking this beauty: no other hummingbird combines every color of the rainbow on the throat and breast. In poor light, could be mistaken for other fairly large hummingbirds like Talamanca Hummingbird. Look for dark blue-black tail, medium-length bill with pink at the base, and blue rump, or just wait for it to turn its head. Sexes alike. Found in montane forests and edges, mostly from 1500m to treeline. Frequently visits feeders.",
+      "comments": [],
+      "id": 14
     }
   ]
 }
