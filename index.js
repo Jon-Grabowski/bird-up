@@ -1,4 +1,4 @@
-// BIRD UP!
+// BIRD UP! created by Jonathan Grabowski, Marc Katz, and Ammar Hussain
 
 //Renders comments on page.
 function renderComment(comment, comments){
@@ -22,6 +22,7 @@ function renderBird(birdID) {
         descrip.innerText = bird.description;
         const dateLocation = document.querySelector('#bird-date-location');
         dateLocation.innerText = `Spotted on ${bird.date} in ${bird.location}`;
+        dateLocation.style = 'font-style: italic; padding-top: 10px'
         const comments = document.querySelector('#comments-section');
         comments.innerHTML = ""
         bird.comments.forEach((comment) => {
