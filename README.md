@@ -2,6 +2,11 @@ Welcome to Bird Up!
 
 Bird Up! is an app for bird enthusiasts to share photos of their bird sightings while also being able to browse and comment on other users bird sightings.
 
+Opening the App:
+To open Bird Up!, you will have to run a json server on your machine and have it watch the bird_db.json file. 
+(Terminal Command: json-server --watch bird_db.json)
+When the server is launched, check to make sure your server's resource address is http://localhost:3000/birds. If not, you will have to update the address in the JavaScript (index.js) fetch statements to match your servers resource address. Once your server is running, open the index.html file in your browser and enjoy the app!
+
 Browsing Existing Submissions:
 Users have the option of browsing submission by either clicking on a post from the list of birds on the left of the page or by utilizing the search bar at the top right of the page. Once a post has been selected by either of these methods, the post will be rendered in the center of the page. Rendered posts will display the picutre of the bird, a brief description of the bird, when/where the bird was spotted, and any comments that have been left on the post.
 
