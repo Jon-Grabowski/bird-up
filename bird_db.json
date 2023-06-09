@@ -108,7 +108,8 @@
       "description": "Soft silvery gray above and white below, with a rusty or peach-colored wash down the flanks. A black patch just above the bill makes the bird look snub-nosed. Tufted Titmice are acrobatic foragers, if a bit slower and more methodical than chickadees.",
       "comments": [
         "The sheer grace and precision in their movements always leave me in awe.",
-        "I wish I could fly like a bird and see the world from up above. Must be a magical experience."
+        "I wish I could fly like a bird and see the world from up above. Must be a magical experience.",
+        "Wow, so beautiful!"
       ]
     },
     {
@@ -136,18 +137,6 @@
         "I agree with the first guy, flock this bird!"
       ],
       "id": 11
-    },
-    {
-      "name": "Nice Bird",
-      "location": "NY",
-      "date": "2023-06-04",
-      "imgURL": "https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_640.jpg",
-      "description": "The bird is nice.",
-      "comments": [
-        "Pretty Bird!",
-        "That's a cool bird!"
-      ],
-      "id": 12
     },
     {
       "name": "Andean Cock-of-the-rock",
